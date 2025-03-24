@@ -1,9 +1,9 @@
 # syntax=docker/dockerfile:1
-ARG GOLANG_VERSION=1.23
+ARG GOLANG_VERSION=1.24
 FROM golang:$GOLANG_VERSION-alpine AS build
 
-ARG GO_SQLCMD_VERSION=1.3.0
-ARG GO_SQLCMD_SHA256=b184eedad43a2e545c39836c5c800b34a35d7c6e29b3a6027327f9365fdfa32b
+ARG GO_SQLCMD_VERSION=1.8.2
+ARG GO_SQLCMD_SHA256=4e97bf4ea6b00a43469156bde3ee91a622deed543b02b9b5dae3fa5565f6fea5
 
 ADD https://api.github.com/repos/microsoft/go-sqlcmd/tarball/v$GO_SQLCMD_VERSION /tmp/gosqlcmd.tar.gz
 
