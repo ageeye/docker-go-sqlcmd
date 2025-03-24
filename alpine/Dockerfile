@@ -21,4 +21,4 @@ FROM alpine
 COPY --from=build /tmp/gosqlcmd/sqlcmd /usr/local/bin/sqlcmd
 COPY --from=build /tmp/gosqlcmd/LICENSE /usr/share/licenses/sqlcmd/LICENSE
 
-ENTRYPOINT ["bash"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]
