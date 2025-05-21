@@ -21,4 +21,6 @@ FROM alpine
 COPY --from=build /tmp/gosqlcmd/sqlcmd /usr/local/bin/sqlcmd
 COPY --from=build /tmp/gosqlcmd/LICENSE /usr/share/licenses/sqlcmd/LICENSE
 
+RUN apk add openssl
+
 ENTRYPOINT ["tail", "-f", "/dev/null"]
